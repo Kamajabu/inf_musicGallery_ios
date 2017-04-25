@@ -5,12 +5,16 @@ import AVFoundation
 
 class PlayerViewController: UIViewController {
 
-    @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var shuffle: UISwitch!
-    
+
+    @IBOutlet var collectionView: UICollectionView!
+
+    var imageIndex: IndexPath?
+    var galleryItems: [GalleryItem] = []
+
     var trackId: Int = 0
     var library = MusicLibrary().library
     var audioPlayer: AVAudioPlayer!
@@ -18,10 +22,13 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.collectionView?.scrollToItem(at: imageIndex!, at: .centeredHorizontally, animated: false)
+        collectionView.reloadData()
+
         // Do any additional setup after loading the view.
-        if let coverImage = library[trackId]["coverImage"]{
-        coverImageView.image = UIImage(named: "\(coverImage).jpg")
-        }
+//        if let coverImage = library[trackId]["coverImage"]{
+//        coverImageView.image = UIImage(named: "\(coverImage).jpg")
+//        }
         
         songTitleLabel.text = library[trackId]["title"]
         artistLabel.text = library[trackId]["artist"]
@@ -56,10 +63,8 @@ class PlayerViewController: UIViewController {
             
             progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
         }
-        
     }
-    
-    
+
     @IBAction func playAction(_ sender: AnyObject) {
         if !audioPlayer.isPlaying {
             audioPlayer.play()
@@ -111,10 +116,10 @@ class PlayerViewController: UIViewController {
                 trackId -= 1
             }
             
-            if let coverImage = library[trackId]["coverImage"]{
-                coverImageView.image = UIImage(named: "\(coverImage).jpg")
-            }
-            
+//            if let coverImage = library[trackId]["coverImage"]{
+//                coverImageView.image = UIImage(named: "\(coverImage).jpg")
+//            }
+//            
             songTitleLabel.text = library[trackId]["title"]
             artistLabel.text = library[trackId]["artist"]
             
@@ -138,10 +143,6 @@ class PlayerViewController: UIViewController {
                 }
             }
         }
-        
-    
-        
-    
     }
     
     @IBAction func nextAction(_ sender: AnyObject) {
@@ -153,10 +154,10 @@ class PlayerViewController: UIViewController {
                 trackId += 1
             }
             
-            if let coverImage = library[trackId]["coverImage"]{
-                coverImageView.image = UIImage(named: "\(coverImage).jpg")
-            }
-            
+//            if let coverImage = library[trackId]["coverImage"]{
+//                coverImageView.image = UIImage(named: "\(coverImage).jpg")
+//            }
+//            
             songTitleLabel.text = library[trackId]["title"]
             artistLabel.text = library[trackId]["artist"]
             
