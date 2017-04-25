@@ -10,14 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "CollectionViewCell"
 
-extension PlayerViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, CollectionViewCellDelegate {
+extension PlayerViewController: CollectionViewCellDelegate {
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let inputFile = Bundle.main.path(forResource: "items", ofType: "plist")
-        let inputDataArray = NSArray(contentsOfFile: inputFile!)
-        return (inputDataArray?.count)!
-
+        return musicItems.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,7 +22,7 @@ extension PlayerViewController: UICollectionViewDataSource, UICollectionViewDele
 
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: cell.frame.width, height: cell.frame.height)))
 
-        let item = galleryItems[indexPath.row]
+        let item = musicItems[indexPath.row]
         let image = UIImage(named: item.itemImage)
 
         imageView.image = image
@@ -33,7 +30,7 @@ extension PlayerViewController: UICollectionViewDataSource, UICollectionViewDele
         cell.backgroundView = UIView()
         cell.backgroundView!.addSubview(imageView)
 
-        cell.setGalleryItem(galleryItems[indexPath.row])
+        cell.setGalleryItem(musicItems[indexPath.row])
         cell.closeDelegate = self
 
         return cell

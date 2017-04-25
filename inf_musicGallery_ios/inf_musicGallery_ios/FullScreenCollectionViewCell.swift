@@ -17,7 +17,7 @@ class FullScreenCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var itemImage: UIImageView!
 
-    func setGalleryItem(_ item:GalleryItem) {
+    func setGalleryItem(_ item:MusicItem) {
         itemImage.image = UIImage(named: item.itemImage)
     }
 }

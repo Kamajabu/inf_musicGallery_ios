@@ -14,7 +14,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet var collectionView: UICollectionView!
 
-    var galleryItems: [GalleryItem] = []
+    var musicItems: [MusicItem] = []
     var selectedItem: IndexPath?
     
     // MARK: -
@@ -34,31 +34,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     fileprivate func initGalleryItems() {
         
-        var items = [GalleryItem]()
-        let inputFile = Bundle.main.path(forResource: "items", ofType: "plist")
+        var items = [MusicItem]()
+        let inputFile = Bundle.main.path(forResource: "audioList", ofType: "plist")
         
         let inputDataArray = NSArray(contentsOfFile: inputFile!)
         
         for inputItem in inputDataArray as! [Dictionary<String, String>] {
-            let galleryItem = GalleryItem(dataDictionary: inputItem)
-            items.append(galleryItem)
+            let musicItem = MusicItem(dataDictionary: inputItem)
+            items.append(musicItem)
         }
         
-        galleryItems = items
+        musicItems = items
     }
     
     // MARK: -
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return galleryItems.count
+        return musicItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryItemCollectionViewCell", for: indexPath) as! GalleryItemCollectionViewCell
-        
-        cell.setGalleryItem(galleryItems[indexPath.row])
+
+        cell.setGalleryItem(musicItems[indexPath.row])
         return cell
         
     }
@@ -76,8 +76,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func actionOnFinishedScrolling() {
         let visibleCells = collectionView.visibleCells
         let sorted = visibleCells.sorted(){ $0.center.y < $1.center.y }
-
-//        sorted.map{ print(collectionView.indexPath(for: $0) ?? -1)}
 
         self.collectionView?.scrollToItem(at: collectionView.indexPath(for: sorted.last!)!,
                                           at: .bottom,
@@ -109,8 +107,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
             let playerVC = segue.destination as! PlayerViewController
             playerVC.trackId = (selectedItem?.row)!
+            playerVC.musicItems = musicItems
             playerVC.imageIndex = selectedItem
-            playerVC.galleryItems = galleryItems
         }
     }
 

@@ -3,37 +3,35 @@
 import UIKit
 import AVFoundation
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+    @IBOutlet var collectionView: UICollectionView!
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var shuffle: UISwitch!
+    
 
-    @IBOutlet var collectionView: UICollectionView!
 
     var imageIndex: IndexPath?
-    var galleryItems: [GalleryItem] = []
+    var musicItems: [MusicItem] = []
 
     var trackId: Int = 0
-    var library = MusicLibrary().library
     var audioPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView?.scrollToItem(at: imageIndex!, at: .centeredHorizontally, animated: false)
-        collectionView.reloadData()
+        collectionView.dataSource = self
+        collectionView.delegate = self
 
-        // Do any additional setup after loading the view.
-//        if let coverImage = library[trackId]["coverImage"]{
-//        coverImageView.image = UIImage(named: "\(coverImage).jpg")
-//        }
+
+        songTitleLabel.text = musicItems[trackId].title
+        artistLabel.text = musicItems[trackId].artist
         
-        songTitleLabel.text = library[trackId]["title"]
-        artistLabel.text = library[trackId]["artist"]
-        
-        let path = Bundle.main.path(forResource: "\(trackId)", ofType: "mp3")
+        let path = Bundle.main.path(forResource: "\(musicItems[trackId].fileName)", ofType: "mp3")
         
         if let path = path {
             let mp3URL = URL(fileURLWithPath: path)
@@ -49,8 +47,20 @@ class PlayerViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+
+
+
         
-        
+    }
+
+    override func viewDidLayoutSubviews() {
+        self.collectionView?.scrollToItem(at: imageIndex!, at: .centeredHorizontally, animated: false)
+        self.collectionView.reloadData()
+
+    }
+
+    @IBAction func backButtonDidTouch(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -111,7 +121,7 @@ class PlayerViewController: UIViewController {
     @IBAction func previousAction(_ sender: AnyObject) {
         if trackId != 0 || trackId > 0 {
             if shuffle.isOn {
-                trackId = Int(arc4random_uniform(UInt32(library.count)))
+                trackId = Int(arc4random_uniform(UInt32(musicItems.count)))
             }else {
                 trackId -= 1
             }
@@ -119,9 +129,15 @@ class PlayerViewController: UIViewController {
 //            if let coverImage = library[trackId]["coverImage"]{
 //                coverImageView.image = UIImage(named: "\(coverImage).jpg")
 //            }
-//            
-            songTitleLabel.text = library[trackId]["title"]
-            artistLabel.text = library[trackId]["artist"]
+
+
+//
+
+            self.collectionView?.scrollToItem(at: IndexPath(item: trackId, section: 0),
+                                              at: .centeredHorizontally, animated: true)
+
+            songTitleLabel.text = musicItems[trackId].title
+            artistLabel.text = musicItems[trackId].artist
             
             audioPlayer.currentTime = 0
             progressView.progress = 0
@@ -147,9 +163,9 @@ class PlayerViewController: UIViewController {
     
     @IBAction func nextAction(_ sender: AnyObject) {
    
-        if trackId == 0 || trackId < 4 {
+        if trackId == 0 || trackId < musicItems.count {
             if shuffle.isOn {
-                trackId = Int(arc4random_uniform(UInt32(library.count)))
+                trackId = Int(arc4random_uniform(UInt32(musicItems.count)))
             }else {
                 trackId += 1
             }
@@ -157,13 +173,18 @@ class PlayerViewController: UIViewController {
 //            if let coverImage = library[trackId]["coverImage"]{
 //                coverImageView.image = UIImage(named: "\(coverImage).jpg")
 //            }
-//            
-            songTitleLabel.text = library[trackId]["title"]
-            artistLabel.text = library[trackId]["artist"]
+//
+
+            self.collectionView?.scrollToItem(at: IndexPath(item: trackId, section: 0),
+                                              at: .centeredHorizontally, animated: true)
+
+            songTitleLabel.text = musicItems[trackId].title
+            artistLabel.text = musicItems[trackId].artist
             
             audioPlayer.currentTime = 0
             progressView.progress = 0
-            
+
+            //fix
             let path = Bundle.main.path(forResource: "\(trackId)", ofType: "mp3")
             
             if let path = path {

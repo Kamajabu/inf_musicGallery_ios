@@ -17,7 +17,6 @@
 		2C52EE7A1E9E909700AA824E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE771E9E909700AA824E /* PlayerViewController.swift */; };
 		2C52EE7B1E9E909700AA824E /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE781E9E909700AA824E /* SongTableViewCell.swift */; };
 		2C52EE7C1E9E909700AA824E /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE791E9E909700AA824E /* LibraryTableViewController.swift */; };
-		2C52EE7F1E9E90AA00AA824E /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE7E1E9E90AA00AA824E /* MusicLibrary.swift */; };
 		2C52EE861E9E90C500AA824E /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C52EE811E9E90C500AA824E /* 0.jpg */; };
 		2C52EE871E9E90C500AA824E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C52EE821E9E90C500AA824E /* 1.jpg */; };
 		2C52EE881E9E90C500AA824E /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C52EE831E9E90C500AA824E /* 2.jpg */; };
@@ -36,7 +35,20 @@
 		2CD844E61EAF8234000C5800 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD844E31EAF8234000C5800 /* UIColor+Extensions.swift */; };
 		2CD844E71EAF8234000C5800 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD844E41EAF8234000C5800 /* UIView+Extensions.swift */; };
 		2CD844E81EAF8234000C5800 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD844E51EAF8234000C5800 /* UIImageView+Extensions.swift */; };
-		2CD844EB1EAF82F4000C5800 /* items.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844EA1EAF82F4000C5800 /* items.plist */; };
+		2CD844F81EAF87A0000C5800 /* birthday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844EC1EAF87A0000C5800 /* birthday.mp3 */; };
+		2CD844F91EAF87A0000C5800 /* black_ant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844ED1EAF87A0000C5800 /* black_ant.mp3 */; };
+		2CD844FA1EAF87A0000C5800 /* box_cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844EE1EAF87A0000C5800 /* box_cat.mp3 */; };
+		2CD844FB1EAF87A0000C5800 /* energy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844EF1EAF87A0000C5800 /* energy.mp3 */; };
+		2CD844FC1EAF87A0000C5800 /* faithful_dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F01EAF87A0000C5800 /* faithful_dog.mp3 */; };
+		2CD844FD1EAF87A0000C5800 /* humsafar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F11EAF87A0000C5800 /* humsafar.mp3 */; };
+		2CD844FE1EAF87A0000C5800 /* jason_shaw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F21EAF87A0000C5800 /* jason_shaw.mp3 */; };
+		2CD844FF1EAF87A0000C5800 /* night_owl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F31EAF87A0000C5800 /* night_owl.mp3 */; };
+		2CD845001EAF87A0000C5800 /* romantic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F41EAF87A0000C5800 /* romantic.mp3 */; };
+		2CD845011EAF87A0000C5800 /* siesta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F51EAF87A0000C5800 /* siesta.mp3 */; };
+		2CD845021EAF87A0000C5800 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F61EAF87A0000C5800 /* siri.mp3 */; };
+		2CD845031EAF87A0000C5800 /* springish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CD844F71EAF87A0000C5800 /* springish.mp3 */; };
+		2CD845051EAF888B000C5800 /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD845041EAF888B000C5800 /* MusicItem.swift */; };
+		2CD845071EAF891F000C5800 /* audioList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CD845061EAF891F000C5800 /* audioList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +85,6 @@
 		2C52EE771E9E909700AA824E /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2C52EE781E9E909700AA824E /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		2C52EE791E9E909700AA824E /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
-		2C52EE7E1E9E90AA00AA824E /* MusicLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
 		2C52EE811E9E90C500AA824E /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		2C52EE821E9E90C500AA824E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		2C52EE831E9E90C500AA824E /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -92,7 +103,20 @@
 		2CD844E31EAF8234000C5800 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		2CD844E41EAF8234000C5800 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2CD844E51EAF8234000C5800 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
-		2CD844EA1EAF82F4000C5800 /* items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
+		2CD844EC1EAF87A0000C5800 /* birthday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birthday.mp3; sourceTree = "<group>"; };
+		2CD844ED1EAF87A0000C5800 /* black_ant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = black_ant.mp3; sourceTree = "<group>"; };
+		2CD844EE1EAF87A0000C5800 /* box_cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = box_cat.mp3; sourceTree = "<group>"; };
+		2CD844EF1EAF87A0000C5800 /* energy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = energy.mp3; sourceTree = "<group>"; };
+		2CD844F01EAF87A0000C5800 /* faithful_dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = faithful_dog.mp3; sourceTree = "<group>"; };
+		2CD844F11EAF87A0000C5800 /* humsafar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = humsafar.mp3; sourceTree = "<group>"; };
+		2CD844F21EAF87A0000C5800 /* jason_shaw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jason_shaw.mp3; sourceTree = "<group>"; };
+		2CD844F31EAF87A0000C5800 /* night_owl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = night_owl.mp3; sourceTree = "<group>"; };
+		2CD844F41EAF87A0000C5800 /* romantic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = romantic.mp3; sourceTree = "<group>"; };
+		2CD844F51EAF87A0000C5800 /* siesta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siesta.mp3; sourceTree = "<group>"; };
+		2CD844F61EAF87A0000C5800 /* siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siri.mp3; sourceTree = "<group>"; };
+		2CD844F71EAF87A0000C5800 /* springish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = springish.mp3; sourceTree = "<group>"; };
+		2CD845041EAF888B000C5800 /* MusicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
+		2CD845061EAF891F000C5800 /* audioList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = audioList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +218,8 @@
 		2C52EE7D1E9E909D00AA824E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C52EE7E1E9E90AA00AA824E /* MusicLibrary.swift */,
 				2C6654F41EAE460A00017002 /* GalleryItem.swift */,
+				2CD845041EAF888B000C5800 /* MusicItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,6 +239,18 @@
 		2C52EE8B1E9E90CD00AA824E /* Audios */ = {
 			isa = PBXGroup;
 			children = (
+				2CD844EC1EAF87A0000C5800 /* birthday.mp3 */,
+				2CD844ED1EAF87A0000C5800 /* black_ant.mp3 */,
+				2CD844EE1EAF87A0000C5800 /* box_cat.mp3 */,
+				2CD844EF1EAF87A0000C5800 /* energy.mp3 */,
+				2CD844F01EAF87A0000C5800 /* faithful_dog.mp3 */,
+				2CD844F11EAF87A0000C5800 /* humsafar.mp3 */,
+				2CD844F21EAF87A0000C5800 /* jason_shaw.mp3 */,
+				2CD844F31EAF87A0000C5800 /* night_owl.mp3 */,
+				2CD844F41EAF87A0000C5800 /* romantic.mp3 */,
+				2CD844F51EAF87A0000C5800 /* siesta.mp3 */,
+				2CD844F61EAF87A0000C5800 /* siri.mp3 */,
+				2CD844F71EAF87A0000C5800 /* springish.mp3 */,
 				2C52EE8C1E9E90DC00AA824E /* 0.mp3 */,
 				2C52EE8D1E9E90DC00AA824E /* 1.mp3 */,
 				2C52EE8E1E9E90DC00AA824E /* 2.mp3 */,
@@ -245,7 +281,7 @@
 		2CD844E91EAF82EC000C5800 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2CD844EA1EAF82F4000C5800 /* items.plist */,
+				2CD845061EAF891F000C5800 /* audioList.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -361,19 +397,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C52EE931E9E90DC00AA824E /* 2.mp3 in Resources */,
+				2CD845021EAF87A0000C5800 /* siri.mp3 in Resources */,
+				2CD845011EAF87A0000C5800 /* siesta.mp3 in Resources */,
 				2C52EE8A1E9E90C500AA824E /* 4.jpg in Resources */,
 				2C52EE881E9E90C500AA824E /* 2.jpg in Resources */,
 				2C52EE861E9E90C500AA824E /* 0.jpg in Resources */,
+				2CD844FB1EAF87A0000C5800 /* energy.mp3 in Resources */,
 				2C52EE911E9E90DC00AA824E /* 0.mp3 in Resources */,
 				2C52EE921E9E90DC00AA824E /* 1.mp3 in Resources */,
 				2C52EE951E9E90DC00AA824E /* 4.mp3 in Resources */,
+				2CD845071EAF891F000C5800 /* audioList.plist in Resources */,
 				2C52EE941E9E90DC00AA824E /* 3.mp3 in Resources */,
 				2C52EE531E9E8F8900AA824E /* LaunchScreen.storyboard in Resources */,
-				2CD844EB1EAF82F4000C5800 /* items.plist in Resources */,
+				2CD844F91EAF87A0000C5800 /* black_ant.mp3 in Resources */,
+				2CD845031EAF87A0000C5800 /* springish.mp3 in Resources */,
+				2CD844FE1EAF87A0000C5800 /* jason_shaw.mp3 in Resources */,
+				2CD844F81EAF87A0000C5800 /* birthday.mp3 in Resources */,
+				2CD844FF1EAF87A0000C5800 /* night_owl.mp3 in Resources */,
 				2C52EE501E9E8F8900AA824E /* Assets.xcassets in Resources */,
+				2CD845001EAF87A0000C5800 /* romantic.mp3 in Resources */,
 				2C52EE4B1E9E8F8900AA824E /* Main.storyboard in Resources */,
+				2CD844FA1EAF87A0000C5800 /* box_cat.mp3 in Resources */,
 				2C52EE891E9E90C500AA824E /* 3.jpg in Resources */,
+				2CD844FD1EAF87A0000C5800 /* humsafar.mp3 in Resources */,
 				2C52EE871E9E90C500AA824E /* 1.jpg in Resources */,
+				2CD844FC1EAF87A0000C5800 /* faithful_dog.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,12 +446,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD845051EAF888B000C5800 /* MusicItem.swift in Sources */,
 				2CD844E81EAF8234000C5800 /* UIImageView+Extensions.swift in Sources */,
 				2CD844E71EAF8234000C5800 /* UIView+Extensions.swift in Sources */,
 				2C52EE7C1E9E909700AA824E /* LibraryTableViewController.swift in Sources */,
 				2C52EE7A1E9E909700AA824E /* PlayerViewController.swift in Sources */,
 				2CD844E61EAF8234000C5800 /* UIColor+Extensions.swift in Sources */,
-				2C52EE7F1E9E90AA00AA824E /* MusicLibrary.swift in Sources */,
 				2C6654FA1EAE471B00017002 /* GalleryItemCollectionViewCell.swift in Sources */,
 				2C6654F51EAE460A00017002 /* GalleryItem.swift in Sources */,
 				2C52EE7B1E9E909700AA824E /* SongTableViewCell.swift in Sources */,
