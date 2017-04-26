@@ -114,7 +114,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yUu-ek-ULX">
                                             <rect key="frame" x="164" y="-2" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="circled_play"/>
+                                            <state key="normal" image="pause"/>
                                             <connections>
                                                 <action selector="playAction:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="Mbr-Rc-d58"/>
                                             </connections>
@@ -257,7 +257,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="GalleryItemCollectionViewCell" id="ERG-NU-bUv" customClass="GalleryItemCollectionViewCell" customModule="inf_musicGallery_ios" customModuleProvider="target">
-                                        <rect key="frame" x="38" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="37" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -312,9 +312,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circled_play" width="32" height="32"/>
         <image name="end" width="32" height="32"/>
         <image name="fast_forward" width="32" height="32"/>
+        <image name="pause" width="32" height="32"/>
         <image name="pic_1" width="400" height="225"/>
         <image name="rewind" width="32" height="32"/>
         <image name="shuffle" width="32" height="32"/>

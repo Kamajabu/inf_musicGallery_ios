@@ -73,6 +73,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                                    targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         perform(#selector(self.actionOnFinishedScrolling), with: nil, afterDelay: Double(velocity.y))
     }
+
     func actionOnFinishedScrolling() {
         let visibleCells = collectionView.visibleCells
         let sorted = visibleCells.sorted(){ $0.center.y < $1.center.y }
@@ -97,8 +98,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let heightForOneItem = heightAvailbleForAllItems / 4 - flowLayout.minimumInteritemSpacing
 
         return CGSize(width: CGFloat(widthForOneItem), height:  CGFloat(heightForOneItem))
-
-
     }
 
 
@@ -119,7 +118,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
-
-
 }
 

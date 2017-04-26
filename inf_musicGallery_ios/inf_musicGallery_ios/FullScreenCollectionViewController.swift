@@ -44,9 +44,22 @@ extension PlayerViewController: CollectionViewCellDelegate {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func finishButtonDidTouch(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint,
+                                   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        perform(#selector(self.actionOnFinishedScrolling), with: nil, afterDelay: Double(velocity.y))
     }
+
+    func actionOnFinishedScrolling() {
+        if let visibleCell = collectionView.visibleCells.last {
+        trackId = collectionView.indexPath(for: visibleCell)!.row
+        }
+
+        audioPlayer.currentTime = 0
+        progressView.progress = 0
+
+        chooseImageTitleArtist(trackId)
+        loadMp3(trackId)
+    }
+
 
 }
