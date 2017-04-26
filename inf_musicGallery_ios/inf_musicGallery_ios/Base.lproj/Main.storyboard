@@ -114,11 +114,14 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yUu-ek-ULX">
                                             <rect key="frame" x="164" y="-2" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="pause"/>
+                                            <state key="normal" image="circled_play"/>
                                             <connections>
-                                                <action selector="pauseAction:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="boh-eq-krG"/>
+                                                <action selector="playAction:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="Mbr-Rc-d58"/>
                                             </connections>
                                         </button>
+                                        <connections>
+                                            <action selector="playAction:" destination="Jkw-yM-gQ6" id="0TI-8a-wtZ"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="K6l-IW-dRv"/>
                                     <barButtonItem style="plain" id="rmC-Xc-LrT">
@@ -156,24 +159,6 @@
                                 </constraints>
                                 <state key="normal" image="shuffle"/>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pua-tE-wAm">
-                                <rect key="frame" x="298" y="569" width="51" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="Lex-rk-lOg"/>
-                                    <constraint firstAttribute="height" constant="31" id="cgJ-9s-vT8"/>
-                                </constraints>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtN-M4-vc2">
-                                <rect key="frame" x="104" y="559" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="L9p-IX-ISh"/>
-                                    <constraint firstAttribute="width" constant="50" id="dEt-ME-7oS"/>
-                                </constraints>
-                                <state key="normal" image="circled_play"/>
-                                <connections>
-                                    <action selector="playAction:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="yz0-Za-j8e"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-Dn-Oi2">
                                 <rect key="frame" x="43" y="494" width="288" height="21"/>
                                 <constraints>
@@ -190,59 +175,57 @@
                                     <constraint firstAttribute="height" constant="2" id="7eK-MT-EZe"/>
                                 </constraints>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89w-nj-GEk">
-                                <rect key="frame" x="212" y="559" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="b9l-Im-XXA"/>
-                                    <constraint firstAttribute="height" constant="50" id="fWq-G0-PlR"/>
-                                </constraints>
-                                <state key="normal" image="stop"/>
-                                <connections>
-                                    <action selector="stopAction:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="Btj-QK-Hje"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEs-Lx-8go">
-                                <rect key="frame" x="28" y="524" width="34" height="30"/>
+                                <rect key="frame" x="167" y="567" width="40" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButtonDidTouch:" destination="Jkw-yM-gQ6" eventType="touchUpInside" id="MtO-jN-Mqr"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pua-tE-wAm">
+                                <rect key="frame" x="305" y="572" width="44" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Lex-rk-lOg"/>
+                                    <constraint firstAttribute="height" constant="24" id="cgJ-9s-vT8"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="89w-nj-GEk" firstAttribute="centerY" secondItem="KtN-M4-vc2" secondAttribute="centerY" id="0pt-hy-gfj"/>
                             <constraint firstItem="f6Y-hR-dFK" firstAttribute="leading" secondItem="nau-Bw-HLo" secondAttribute="leadingMargin" constant="12" id="1Hz-8W-yJW"/>
                             <constraint firstItem="7RP-em-KQ2" firstAttribute="leading" secondItem="nau-Bw-HLo" secondAttribute="leading" id="2on-10-6oy"/>
-                            <constraint firstItem="Pua-tE-wAm" firstAttribute="leading" secondItem="89w-nj-GEk" secondAttribute="trailing" constant="36" id="3bw-Ks-jiW"/>
                             <constraint firstAttribute="trailing" secondItem="wH0-ed-yMS" secondAttribute="trailing" id="7Ow-14-MwF"/>
                             <constraint firstAttribute="trailing" secondItem="7RP-em-KQ2" secondAttribute="trailing" id="8gI-pl-2my"/>
+                            <constraint firstItem="Pua-tE-wAm" firstAttribute="centerY" secondItem="f6Y-hR-dFK" secondAttribute="centerY" id="HN3-F3-veD"/>
                             <constraint firstItem="f7l-1z-iDc" firstAttribute="centerX" secondItem="gBD-Dn-Oi2" secondAttribute="centerX" id="Hbu-aU-GQj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pua-tE-wAm" secondAttribute="trailing" constant="12" id="J6h-B3-eyH"/>
                             <constraint firstItem="Y0H-56-viB" firstAttribute="top" secondItem="7RP-em-KQ2" secondAttribute="bottom" id="KZ3-X1-HCR"/>
-                            <constraint firstItem="KtN-M4-vc2" firstAttribute="leading" secondItem="f6Y-hR-dFK" secondAttribute="trailing" constant="36" id="OCz-hc-nOT"/>
                             <constraint firstItem="YfS-BW-OrV" firstAttribute="top" secondItem="gBD-Dn-Oi2" secondAttribute="bottom" constant="13" id="OS2-oa-2Le"/>
                             <constraint firstItem="wH0-ed-yMS" firstAttribute="leading" secondItem="nau-Bw-HLo" secondAttribute="leading" constant="12" id="P2s-C5-7uD"/>
                             <constraint firstItem="gBD-Dn-Oi2" firstAttribute="centerX" secondItem="YfS-BW-OrV" secondAttribute="centerX" id="Qm4-2v-jPI"/>
                             <constraint firstItem="7RP-em-KQ2" firstAttribute="top" secondItem="f6Y-hR-dFK" secondAttribute="bottom" constant="19" id="XtA-PE-8Lu"/>
                             <constraint firstItem="YfS-BW-OrV" firstAttribute="centerX" secondItem="7RP-em-KQ2" secondAttribute="centerX" id="ZVd-Fk-dge"/>
+                            <constraint firstItem="hEs-Lx-8go" firstAttribute="centerY" secondItem="f6Y-hR-dFK" secondAttribute="centerY" id="ZzS-Mn-HpP"/>
                             <constraint firstItem="7RP-em-KQ2" firstAttribute="top" secondItem="YfS-BW-OrV" secondAttribute="bottom" constant="74" id="cFB-VH-64I"/>
-                            <constraint firstItem="KtN-M4-vc2" firstAttribute="centerY" secondItem="f6Y-hR-dFK" secondAttribute="centerY" id="cz0-qY-y3G"/>
-                            <constraint firstItem="hEs-Lx-8go" firstAttribute="centerY" secondItem="YfS-BW-OrV" secondAttribute="centerY" id="iX8-qs-LvN"/>
-                            <constraint firstItem="hEs-Lx-8go" firstAttribute="leading" secondItem="f6Y-hR-dFK" secondAttribute="leading" id="j4M-5a-s9r"/>
                             <constraint firstAttribute="leadingMargin" secondItem="f7l-1z-iDc" secondAttribute="leading" id="nFV-a5-knK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f7l-1z-iDc" secondAttribute="trailing" id="riO-Ei-bLw"/>
                             <constraint firstItem="wH0-ed-yMS" firstAttribute="top" secondItem="Zgf-cE-DI3" secondAttribute="bottom" constant="12" id="tMj-1c-dxf"/>
                             <constraint firstItem="f7l-1z-iDc" firstAttribute="top" secondItem="wH0-ed-yMS" secondAttribute="bottom" constant="44" id="vhg-Yn-bmF"/>
                             <constraint firstItem="gBD-Dn-Oi2" firstAttribute="top" secondItem="f7l-1z-iDc" secondAttribute="bottom" constant="24" id="wpD-uB-nul"/>
-                            <constraint firstItem="Pua-tE-wAm" firstAttribute="centerY" secondItem="89w-nj-GEk" secondAttribute="centerY" id="zU6-om-78T"/>
+                            <constraint firstItem="hEs-Lx-8go" firstAttribute="centerX" secondItem="7RP-em-KQ2" secondAttribute="centerX" id="z1X-QO-mFQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="YfS-BW-OrV" id="sPR-lb-0fZ"/>
                         <outlet property="collectionView" destination="wH0-ed-yMS" id="46j-dc-Khs"/>
+                        <outlet property="nextSong" destination="G1S-Ho-Cbt" id="XLg-9c-nuJ"/>
+                        <outlet property="playPause" destination="yUu-ek-ULX" id="jFG-Ty-hc0"/>
+                        <outlet property="previousSong" destination="c3i-hN-tSU" id="uef-hH-ZNS"/>
                         <outlet property="progressView" destination="f7l-1z-iDc" id="lfB-rz-lnJ"/>
+                        <outlet property="rewindBack" destination="egd-3M-f0c" id="lI9-fH-Ynq"/>
+                        <outlet property="rewindForward" destination="rmC-Xc-LrT" id="CI7-iM-Cot"/>
                         <outlet property="shuffle" destination="Pua-tE-wAm" id="WPO-us-Cep"/>
                         <outlet property="songTitleLabel" destination="gBD-Dn-Oi2" id="bad-TJ-guK"/>
                     </connections>
@@ -274,7 +257,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="GalleryItemCollectionViewCell" id="ERG-NU-bUv" customClass="GalleryItemCollectionViewCell" customModule="inf_musicGallery_ios" customModuleProvider="target">
-                                        <rect key="frame" x="37" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="38" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -332,11 +315,9 @@
         <image name="circled_play" width="32" height="32"/>
         <image name="end" width="32" height="32"/>
         <image name="fast_forward" width="32" height="32"/>
-        <image name="pause" width="32" height="32"/>
         <image name="pic_1" width="400" height="225"/>
         <image name="rewind" width="32" height="32"/>
         <image name="shuffle" width="32" height="32"/>
         <image name="skip_to_start" width="32" height="32"/>
-        <image name="stop" width="32" height="32"/>
     </resources>
 </document>

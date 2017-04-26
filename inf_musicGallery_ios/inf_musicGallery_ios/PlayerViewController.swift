@@ -12,6 +12,12 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var shuffle: UISwitch!
 
+    @IBOutlet weak var nextSong: UIBarButtonItem!
+    @IBOutlet weak var rewindForward: UIBarButtonItem!
+    @IBOutlet weak var previousSong: UIBarButtonItem!
+    @IBOutlet weak var rewindBack: UIBarButtonItem!
+
+    @IBOutlet weak var playPause: UIButton!
     var isFirstStart = true
 
     var imageIndex: IndexPath?
@@ -57,15 +63,26 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBAction func playAction(_ sender: AnyObject) {
         if !audioPlayer.isPlaying {
             audioPlayer.play()
+            if let image = UIImage(named: "pause") {
+                UIView.transition(with: playPause, duration: 0.4, options: .transitionFlipFromRight, animations: {
+                    sender.setImage(image, for: .normal)
+                }, completion: nil)
+            }
+        } else {
+            audioPlayer.pause()
+            if let image = UIImage(named:"circled_play") {
+                UIView.transition(with: playPause, duration: 0.4, options: .transitionFlipFromRight, animations: {
+                    sender.setImage(image, for: .normal)
+                }, completion: nil)
+            }
         }
     }
 
-    @IBAction func stopAction(_ sender: AnyObject) {
+    func stopAction(_ sender: AnyObject) {
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         progressView.progress = 0
     }
-
 
     @IBAction func pauseAction(_ sender: AnyObject) {
         audioPlayer.pause()
