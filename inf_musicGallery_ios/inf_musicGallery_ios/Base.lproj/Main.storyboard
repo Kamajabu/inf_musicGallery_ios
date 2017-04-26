@@ -17,77 +17,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--SONGS-->
-        <scene sceneID="IbE-h0-yzh">
-            <objects>
-                <tableViewController id="BPn-KA-sSL" customClass="LibraryTableViewController" customModule="inf_musicGallery_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsp-97-X8z">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="136" id="vvu-Lp-6Mw" customClass="SongTableViewCell" customModule="inf_musicGallery_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="136"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vvu-Lp-6Mw" id="EzA-gf-vhU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqV-JW-zUE">
-                                            <rect key="frame" x="136" y="37" width="231" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="4io-tO-bRV"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZM-U8-ZQ3">
-                                            <rect key="frame" x="136" y="8" width="231" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="0Oc-Y6-s0O"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzi-B1-CCs">
-                                            <rect key="frame" x="8" y="8" width="120" height="120"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="120" id="PVa-K1-zmB"/>
-                                                <constraint firstAttribute="height" constant="120" id="aLH-NX-TxH"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="GZM-U8-ZQ3" firstAttribute="trailing" secondItem="EzA-gf-vhU" secondAttribute="trailingMargin" id="C20-r6-bFn"/>
-                                        <constraint firstItem="HqV-JW-zUE" firstAttribute="top" secondItem="GZM-U8-ZQ3" secondAttribute="bottom" constant="8" id="JzF-cv-5Gf"/>
-                                        <constraint firstItem="HqV-JW-zUE" firstAttribute="leading" secondItem="tzi-B1-CCs" secondAttribute="trailing" constant="8" id="ML1-SH-JPu"/>
-                                        <constraint firstItem="tzi-B1-CCs" firstAttribute="top" secondItem="EzA-gf-vhU" secondAttribute="topMargin" id="Mil-DK-kOM"/>
-                                        <constraint firstItem="tzi-B1-CCs" firstAttribute="leading" secondItem="EzA-gf-vhU" secondAttribute="leadingMargin" id="VcZ-o0-PxI"/>
-                                        <constraint firstItem="GZM-U8-ZQ3" firstAttribute="leading" secondItem="tzi-B1-CCs" secondAttribute="trailing" constant="8" id="XGc-qI-wDo"/>
-                                        <constraint firstItem="GZM-U8-ZQ3" firstAttribute="top" secondItem="EzA-gf-vhU" secondAttribute="topMargin" id="cQK-Se-GJN"/>
-                                        <constraint firstAttribute="trailing" secondItem="HqV-JW-zUE" secondAttribute="trailing" constant="8" id="daY-Vo-VyH"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="artistLabel" destination="HqV-JW-zUE" id="P7N-ds-P6N"/>
-                                    <outlet property="coverImageView" destination="tzi-B1-CCs" id="kFE-zd-StC"/>
-                                    <outlet property="songTitleLabel" destination="GZM-U8-ZQ3" id="hgG-4f-bgO"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BPn-KA-sSL" id="SN0-Gh-cXZ"/>
-                            <outlet property="delegate" destination="BPn-KA-sSL" id="rs7-0t-9ca"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="SONGS" id="aRe-JI-2SW"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GyO-VQ-uTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118" y="307"/>
-        </scene>
         <!--Player View Controller-->
         <scene sceneID="410-lw-hX8">
             <objects>
@@ -322,29 +251,6 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="305.39730134932535"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4il-nw-r22">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SsH-5v-Wdu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CFx-w5-dfu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BPn-KA-sSL" kind="relationship" relationship="rootViewController" id="LFb-FZ-WZT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d5w-Fa-wmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-730" y="308"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="6c0-6I-eMe">
             <objects>
@@ -368,7 +274,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="GalleryItemCollectionViewCell" id="ERG-NU-bUv" customClass="GalleryItemCollectionViewCell" customModule="inf_musicGallery_ios" customModuleProvider="target">
-                                        <rect key="frame" x="38" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="37" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -419,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUT-33-Dif" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="-490"/>
+            <point key="canvasLocation" x="108" y="305"/>
         </scene>
     </scenes>
     <resources>
