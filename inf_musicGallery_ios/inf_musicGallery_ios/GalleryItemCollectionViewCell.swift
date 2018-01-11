@@ -9,11 +9,9 @@
 import UIKit
 
 class GalleryItemCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet var itemImageView: UIImageView!
     
     func setGalleryItem(_ item:MusicItem) {
         itemImageView.image = UIImage(named: item.itemImage)
     }
-    
 }

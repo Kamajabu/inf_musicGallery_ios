@@ -11,8 +11,8 @@ import UIKit
 protocol CollectionViewCellDelegate: class {
     func cellDelegateCloseController(sender: AnyObject)
 }
-class FullScreenCollectionViewCell: UICollectionViewCell {
 
+class FullScreenCollectionViewCell: UICollectionViewCell {
     weak var closeDelegate: CollectionViewCellDelegate?
 
     @IBOutlet weak var itemImage: UIImageView!

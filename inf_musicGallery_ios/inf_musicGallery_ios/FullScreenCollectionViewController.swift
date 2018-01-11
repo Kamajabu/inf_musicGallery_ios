@@ -11,16 +11,18 @@ import UIKit
 private let reuseIdentifier = "CollectionViewCell"
 
 extension PlayerViewController: CollectionViewCellDelegate {
-
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return musicItems.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FullScreenCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                      for: indexPath) as! FullScreenCollectionViewCell
 
-        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: cell.frame.width, height: cell.frame.height)))
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0,y :0),
+                                                  size: CGSize(width: cell.frame.width,
+                                                               height: cell.frame.height)))
 
         let item = musicItems[indexPath.row]
         let image = UIImage(named: item.itemImage)
@@ -36,7 +38,9 @@ extension PlayerViewController: CollectionViewCellDelegate {
         return cell
     }
 
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width , height: collectionView.frame.height )
     }
 
@@ -49,9 +53,9 @@ extension PlayerViewController: CollectionViewCellDelegate {
         perform(#selector(self.actionOnFinishedScrolling), with: nil, afterDelay: Double(velocity.y))
     }
 
-    func actionOnFinishedScrolling() {
+    @objc func actionOnFinishedScrolling() {
         if let visibleCell = collectionView.visibleCells.last {
-        trackId = collectionView.indexPath(for: visibleCell)!.row
+            trackId = collectionView.indexPath(for: visibleCell)!.row
         }
 
         audioPlayer.currentTime = 0
@@ -60,6 +64,4 @@ extension PlayerViewController: CollectionViewCellDelegate {
         chooseImageTitleArtist(trackId)
         loadMp3(trackId)
     }
-
-
 }

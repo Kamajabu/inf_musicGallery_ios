@@ -3,8 +3,8 @@
 import UIKit
 import AVFoundation
 
-class PlayerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+class PlayerViewController: UIViewController, UICollectionViewDataSource,
+UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet var collectionView: UICollectionView!
 
     @IBOutlet weak var progressView: UIProgressView!
@@ -43,7 +43,6 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
             self.collectionView.reloadData()
             isFirstStart = false
         }
-
     }
 
     @IBAction func backButtonDidTouch(_ sender: Any) {
@@ -54,7 +53,7 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
         audioPlayer.stop()
     }
 
-    func updateProgressView(){
+    @objc func updateProgressView(){
         if audioPlayer.isPlaying {
             progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
         }
@@ -94,7 +93,7 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         if time > audioPlayer.duration {
             stopAction(self)
-        }else {
+        } else {
             audioPlayer.currentTime = time
         }
 
@@ -166,8 +165,11 @@ class PlayerViewController: UIViewController, UICollectionViewDataSource, UIColl
                 audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
                 audioPlayer.play()
 
-                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(PlayerViewController.updateProgressView), userInfo: nil, repeats: true)
-                progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: false)
+                Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                                     selector: #selector(PlayerViewController.updateProgressView),
+                                     userInfo: nil, repeats: true)
+                progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration),
+                                         animated: false)
                 
             } catch let error as NSError {
                 print(error.localizedDescription)

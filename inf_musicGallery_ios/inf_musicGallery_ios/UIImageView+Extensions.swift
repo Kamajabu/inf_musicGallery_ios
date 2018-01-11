@@ -9,10 +9,8 @@
 import Foundation
 import UIKit
 
-extension UIImageView
-{
-    func addBlurEffect()
-    {
+extension UIImageView {
+    func addBlurEffect() {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.bounds

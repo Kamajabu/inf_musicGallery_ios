@@ -15,8 +15,6 @@
 		2C52EE5E1E9E8F8900AA824E /* inf_musicGallery_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE5D1E9E8F8900AA824E /* inf_musicGallery_iosTests.swift */; };
 		2C52EE691E9E8F8900AA824E /* inf_musicGallery_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE681E9E8F8900AA824E /* inf_musicGallery_iosUITests.swift */; };
 		2C52EE7A1E9E909700AA824E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE771E9E909700AA824E /* PlayerViewController.swift */; };
-		2C52EE7B1E9E909700AA824E /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE781E9E909700AA824E /* SongTableViewCell.swift */; };
-		2C52EE7C1E9E909700AA824E /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52EE791E9E909700AA824E /* LibraryTableViewController.swift */; };
 		2C6654F31EAE45C300017002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6654F21EAE45C300017002 /* ViewController.swift */; };
 		2C6654F51EAE460A00017002 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6654F41EAE460A00017002 /* GalleryItem.swift */; };
 		2C6654FA1EAE471B00017002 /* GalleryItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6654F91EAE471B00017002 /* GalleryItemCollectionViewCell.swift */; };
@@ -73,8 +71,6 @@
 		2C52EE681E9E8F8900AA824E /* inf_musicGallery_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inf_musicGallery_iosUITests.swift; sourceTree = "<group>"; };
 		2C52EE6A1E9E8F8900AA824E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C52EE771E9E909700AA824E /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		2C52EE781E9E909700AA824E /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
-		2C52EE791E9E909700AA824E /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		2C6654F21EAE45C300017002 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C6654F41EAE460A00017002 /* GalleryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
 		2C6654F91EAE471B00017002 /* GalleryItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -188,8 +184,6 @@
 				2C52EE771E9E909700AA824E /* PlayerViewController.swift */,
 				2C6654FB1EAE674D00017002 /* FullScreenCollectionViewController.swift */,
 				2CD844E01EAF8200000C5800 /* FullScreenCollectionViewCell.swift */,
-				2C52EE781E9E909700AA824E /* SongTableViewCell.swift */,
-				2C52EE791E9E909700AA824E /* LibraryTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -317,17 +311,20 @@
 					2C52EE411E9E8F8900AA824E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AEXXQNVE8L;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					2C52EE581E9E8F8900AA824E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AEXXQNVE8L;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2C52EE411E9E8F8900AA824E;
 					};
 					2C52EE631E9E8F8900AA824E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AEXXQNVE8L;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2C52EE411E9E8F8900AA824E;
 					};
@@ -401,12 +398,10 @@
 				2CD845051EAF888B000C5800 /* MusicItem.swift in Sources */,
 				2CD844E81EAF8234000C5800 /* UIImageView+Extensions.swift in Sources */,
 				2CD844E71EAF8234000C5800 /* UIView+Extensions.swift in Sources */,
-				2C52EE7C1E9E909700AA824E /* LibraryTableViewController.swift in Sources */,
 				2C52EE7A1E9E909700AA824E /* PlayerViewController.swift in Sources */,
 				2CD844E61EAF8234000C5800 /* UIColor+Extensions.swift in Sources */,
 				2C6654FA1EAE471B00017002 /* GalleryItemCollectionViewCell.swift in Sources */,
 				2C6654F51EAE460A00017002 /* GalleryItem.swift in Sources */,
-				2C52EE7B1E9E909700AA824E /* SongTableViewCell.swift in Sources */,
 				2C6654F31EAE45C300017002 /* ViewController.swift in Sources */,
 				2C6654FC1EAE674D00017002 /* FullScreenCollectionViewController.swift in Sources */,
 				2C52EE461E9E8F8900AA824E /* AppDelegate.swift in Sources */,
@@ -568,7 +563,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -581,7 +577,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -595,7 +592,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inf_musicGallery_ios.app/inf_musicGallery_ios";
 			};
 			name = Debug;
@@ -610,7 +608,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inf_musicGallery_ios.app/inf_musicGallery_ios";
 			};
 			name = Release;
@@ -624,7 +623,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-iosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = inf_musicGallery_ios;
 			};
 			name = Debug;
@@ -638,7 +638,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kamajabu.inf-musicGallery-iosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = inf_musicGallery_ios;
 			};
 			name = Release;
